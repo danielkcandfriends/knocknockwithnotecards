@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html><head>
+<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<script src="https://code.jquery.com/jquery-3.4.1.min.js"></script>
+<script src="scripts/boardgame.js"></script>
+<link href="stylesheets/boardgame.css" rel="stylesheet">
+
+<title>Race to the Finish</title>
+
+<link rel="apple-touch-icon" sizes="180x180" href="favicon_io/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon_io/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon_io/favicon-16x16.png">
+<link rel="manifest" href="favicon_io/site.webmanifest">
+
+</head>
+
+<body>
+
+<div id="instructions">
+
+<div id="view-instructions">
+
+<h2>Instructions</h2>
+
+<ol>
+<li>The youngest player should go first.</li>
+<li>Start by flipping over a challenge card. Then complete the challenge on the card!</li>
+<li>After completing the challenge, you can flip over a "rhythm" card.</li>
+<li>Clap out the rhythm! If you clapped four times, you can move forward four spaces; if you clapped three times, three spaces, etc.</li>
+<li>The first player to reach the end wins the game!</li>
+</ol>
+</div>
+<img src="images/cloud.png" class="title">
+
+</div>
+
+<div id="sidebar">
+
+<img src="images/KC-Logo-Cloud-Shadow-r5.png" class="title"><br><br>
+
+<div id="cards">
+
+<center><h2>Flip a card!</h2>
+
+<div style="margin: 5px auto">Difficulty:
+<span class="easy diff">LEVEL 1</span>
+<span class="medium diff">LEVEL 2</span>
+<span class="hard diff">LEVEL 3</span>
+<span class="expert diff">LEVEL 4</span>
+<br><input type="range" id="difficulty" name="difficulty" class="slider" min="0" max="2"></div>
+
+<div id="cardtable">
+<div class="pullcard carddiv"><div class="blank"></div><div id="chcardimg" class="cardcontainer"></div><h3>pull a challenge card</h3>
+<div id="easychallenges" class="chcontainer">
+  <div class="easyrow row"><div class="easychallenge">What friend would say this: “I’m Always first!”</div></div>
+  <div class="easyrow row"><div class="easychallenge">What friend would say this: “I can fit in Anywhere!”</div></div>
+  <div class="easyrow row"><div class="easychallenge">What friend would say this: “Get out of my Face!”</div></div>
+  <div class="easyrow row"><div class="easychallenge">What friend would say this: “Don’t let me be a C-saw-C!”</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play a song as quietly as possible!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play a song as LOUD as possible!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play Flying Robots like a robot!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play a song as FAST as possible!</div></div>
+  <div class="easyrow row"><div class="easychallenge">What notes are a step away from Alien?</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play a song without looking at your hands!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play Mary Had a Little Lamb without looking at the music!</div></div>
+  <div class="easyrow row"><div class="easychallenge">What’s the name of the position where both our thumbs share C-Saw-C?</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play from the TOP of the piano to the BOTTOM, skipping every other note.</div></div>
+  <div class="easyrow row"><div class="easychallenge">Name all of the line friends!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Name all of the space friends!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Spell a word using piano keys!</div></div>
+  <div class="easyrow row"><div class="easychallenge">Spell CAGE using the piano keys</div></div>
+  <div class="easyrow row"><div class="easychallenge">Spell BAG using the piano keys</div></div>
+  <div class="easyrow row"><div class="easychallenge">Spell EGG using the piano keys</div></div>
+  <div class="easyrow row"><div class="easychallenge">If you use your number 2 finger with each hand, what two friends are you playing?</div></div>
+  <div class="easyrow row"><div class="easychallenge">If you use your number 4 finger with each hand, what two friends are you playing?</div></div>
+  <div class="easyrow row"><div class="easychallenge">If you use your number 3 finger with each hand, what two friends are you playing?</div></div>
+  <div class="easyrow row"><div class="easychallenge">Play from the BOTTOM of the piano to the TOP, playing EVERY note (even the black notes—don’t skip any!)</div></div>
+</div>
+<div id="medchallenges" class="chcontainer">
+  <div class="medrow row"><div class="medchallenge">How many beats does a half note get?</div></div>
+  <div class="medrow row"><div class="medchallenge">How many beats does a quarter note get?</div></div>
+  <div class="medrow row"><div class="medchallenge">How many beats does a whole note get?</div></div>
+  <div class="medrow row"><div class="medchallenge">How can you tell how many beats are in a measure?</div></div>
+  <div class="medrow row"><div class="medchallenge">What’s the difference between a whole rest, and a half rest?</div></div>
+  <div class="medrow row"><div class="medchallenge">How do you clap all the different types of notes? (whole, half, quarter, dotted half)</div></div>
+  <div class="medrow row"><div class="medchallenge">What three new friends do we meet in Level 2?</div></div>
+  <div class="medrow row"><div class="medchallenge">What is the new position we learn in Level 2?</div></div>
+  <div class="medrow row"><div class="medchallenge">What two friends are shared between C position, and middle C position?</div></div>
+  <div class="medrow row"><div class="medchallenge">What does “tempo” mean?</div></div>
+  <div class="medrow row"><div class="medchallenge">What is a rest?</div></div>
+  <div class="medrow row"><div class="medchallenge">Play a song without looking at your hands!</div></div>
+  <div class="medrow row"><div class="medchallenge">Play a song without looking at the music!</div></div>
+  <div class="medrow row"><div class="medchallenge">What friend would say this: “I LOVE everything to be even!”</div></div>
+  <div class="medrow row"><div class="medchallenge">What friend would say this: “Everyone forgets me…sniff sniff…”</div></div>
+  <div class="medrow row"><div class="medchallenge">What friend says absolutely NOTHING?</div></div>
+  <div class="medrow row"><div class="medchallenge">Why is rhythm important in music?</div></div>
+  <div class="medrow row"><div class="medchallenge">Do drums play the rhythm of a song, or the melody?</div></div>
+  <div class="medrow row"><div class="medchallenge">What is it called when you play two or more notes at the same time?</div></div>
+  <div class="medrow row"><div class="medchallenge">Draw the symbol that tells you to repeat a song!</div></div>
+  <div class="medrow row"><div class="medchallenge">How can you tell the difference been half notes and quarters notes?</div></div>
+  <div class="medrow row"><div class="medchallenge">How can you tell the difference between half notes and whole notes?</div></div>
+</div>
+<div id="hardchallenges" class="chcontainer">
+  <div class="hardrow row"><div class="hardchallenge">Play a song without looking at your hands!</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Play a song without looking at the music!</div></div>
+  <div class="hardrow row"><div class="hardchallenge">How many beats is an eighth note worth?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What new friends do we meet in Level 3?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Play a Mr. Face Sharp on the piano!</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Play an Alien Flat!</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What is a Natural?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What is a scale?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Now that we have eighth notes, how do you clap a quarter note?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Now that we have eighth notes, how do you clap an eighth note?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Now that we have eighth notes, how do you clap a half note?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">Now that we have eighth notes, how do you clap a whole note?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">How many beats does a dotted quarter note get?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What new hand positions do you know?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What friend would say this: “I love to paint everything!”</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What happened to monkey in level 3?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What is one of the RULES that the monkey teaches?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What does legato mean?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What does staccato mean?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What is a chord? Play a chord!</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What does a dot do to a note?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">How can you tell the difference between quarter notes and eighth notes?</div></div>
+  <div class="hardrow row"><div class="hardchallenge">What is the fastest type of note? What is the slowest?</div></div>
+</div>
+</div>
+<div class="carddiv">then roll the die:<div id="rollme"></div></div>
+</div>
+
+<button id="next_turn">Move on to the next player!</button></center>
+
+</div>
+
+</div>
+
+<div id="board">
+<div class="pos_rel"><div id="title"><img id="title" src="images/race-to-the-finish-title.png"></div><img id="game" src="images/justboard1x.png"></div>
+</div>
+
+<div id="characters">
+
+<img src="images/dragndrop.png" class="title">
+
+<div class="pos_rel" style="margin-top: 20px;">
+
+<img class="drag char hand" src="assets/characters/RHAND.png" style="top: 70px; right: 15%;">
+<img class="drag char" src="assets/characters/Luigi.png" style="top: 0; right: 60%">
+<img class="drag char" src="assets/characters/MONKEY.png" style="top: 170px; right: 15%">
+<img class="drag char" src="assets/characters/teacher.png" style="top: 140px; right: 60%">
+<img class="drag char hand" src="assets/characters/LHAND.png" style="top: 290px; right: 60%">
+
+</div>
+
+</div>
+
+</body>
+
+</html>
